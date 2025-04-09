@@ -2,6 +2,7 @@
 while True:
     print("type (exit) if you want to stop adding question")
     # ask for a Questions.
+    user_questions = input("Enter a Question: ")
     # ask for the possible answers in (A, B, C, D)
     # input the correct answer.
 

@@ -4,6 +4,10 @@ while True:
     # ask for a Questions.
     user_questions = input("Enter a Question: ")
     # ask for the possible answers in (A, B, C, D)
+    choice_A = input("Enter a possible answer, A: ")
+    choice_B = input("Enter a possible answer, B: ")
+    choice_C = input("Enter a possible answer, C: ")
+    choice_D = input("Enter a possible answer, D: ")
     # input the correct answer.
 
 # add the question, possible answers, and the correct answer in a txt file.

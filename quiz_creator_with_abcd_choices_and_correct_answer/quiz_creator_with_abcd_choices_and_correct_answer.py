@@ -5,6 +5,10 @@ while True:
     # ask for a Questions.
     user_questions = input("Enter a Question: ")
 
+    if user_questions == "exit":
+        print("You typed 'exit'. Exiting the quiz creator.")
+        break
+
     # ask for the possible answers in (A, B, C, D)
     choice_A = input("Enter a possible answer, A: ")
     choice_B = input("Enter a possible answer, B: ")
@@ -14,8 +18,4 @@ while True:
     # input the correct answer.
     correct_answer = input("Enter the correct answer(A, B, C, D): ")
 
-    # add the question, possible answers, and the correct answer in a txt file.
-    # use the loop if the user wants to add another questions and stop if the user type "exit"
-    if user_questions == "exit":
-        print("You typed 'exit'. Exiting the quiz creator.")
-        break
+# add the question, possible answers, and the correct answer in a txt file.

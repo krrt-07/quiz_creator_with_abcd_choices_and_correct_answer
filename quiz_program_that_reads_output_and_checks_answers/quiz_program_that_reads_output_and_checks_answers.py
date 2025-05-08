@@ -1,5 +1,7 @@
 # make the Quiz App.
+# make it randomize the questions.
 import tkinter as tk
+import random 
 
 # open the text file from Quiz Creator in read mode.
 def load_questions(filename="user_quiz.txt"):
@@ -48,8 +50,12 @@ class QuizApp:
         master.title("Quiz App")
         master.geometry("500x400")
         master.resizable(False, False)
-        
-# make it randomize the questions.
+
+         # Load and shuffle the questions
+        self.quiz_questions = load_questions()
+        random.shuffle(self.quiz_questions)
+
+
 # set the user score and current question index to 0.
 # Create the question label.
 # Create the choice buttons (A, B, C, D)

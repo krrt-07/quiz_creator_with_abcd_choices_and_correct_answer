@@ -1,16 +1,66 @@
-# Quiz Creator Program
+# 🧠 Python Quiz System
 
-This Python program allows users to create a quiz by inputting questions, possible answers, and the correct answer. The program stores the quiz data in a `.txt` file, and the user can continue adding questions until they type `exit` to stop the program.
+This project is a complete quiz system using Python. It includes:
 
-## Features:
-- Users are prompted to input a question along with four possible answers (A, B, C, D).
-- The correct answer is specified by the user.
-- The program saves each question, answers, and the correct answer in a file named `user_quiz.txt`.
-- The user can continue adding questions or type `exit` to end the quiz creation process.
+1. `quiz_creator_with_abcd_choices_and_correct_answer.py` – to create and store quiz questions  
+2. `quiz_program_that_reads_output_and_checks_answers.py` – to load the questions, quiz the user, and check answers using a GUI
 
-## How to Use:
-1. Run the script.
-2. Enter a question when prompted.
-3. Input the four possible answers (A, B, C, D).
-4. Specify the correct answer.
-5. Type `exit` when you are done creating the quiz to stop the program.
+---
+
+## 📁 File Overview
+
+| File Name                                                       | Description                                 |
+|------------------------------------------------------------------|---------------------------------------------|
+| `quiz_creator_with_abcd_choices_and_correct_answer.py`           | Terminal program to create quiz questions   |
+| `user_quiz.txt`                                                  | Stores all questions and answers            |
+| `quiz_program_that_reads_output_and_checks_answers.py`           | GUI program that runs the quiz              |
+
+---
+
+## ✏️ 1. Quiz Creator
+
+**Filename:** `quiz_creator_with_abcd_choices_and_correct_answer.py`  
+This script lets you create your own multiple-choice quiz. You can:
+- Input a question
+- Add 4 choices (A, B, C, D)
+- Set the correct answer
+- Repeat until you type `exit`
+
+### 📝 Output Format (in `user_quiz.txt`):
+Question #1: What is 2 + 2?
+A. 3
+B. 4
+C. 5
+D. 22
+Correct Answer: B
+
+
+---
+
+## 🧠 2. Quiz Reader
+
+**Filename:** `quiz_program_that_reads_output_and_checks_answers.py`  
+This is a GUI-based program using `tkinter` that:
+- Loads questions from `user_quiz.txt`
+- Randomly displays one question at a time
+- Lets the user click answers (A, B, C, D)
+- Shows if the answer is correct or wrong
+- Tracks the score and shows the final result
+
+---
+
+## 🔗 How It Works
+
+1. **Create quiz questions** using the Creator program  
+   → Saved automatically to `user_quiz.txt`  
+2. **Run the Reader program** to take the quiz  
+   → Loads and uses the same file to quiz the user
+
+---
+
+## 🚀 How to Run
+
+### Run the Quiz Creator (Terminal):
+```bash
+python quiz_creator_with_abcd_choices_and_correct_answer.py
+ 

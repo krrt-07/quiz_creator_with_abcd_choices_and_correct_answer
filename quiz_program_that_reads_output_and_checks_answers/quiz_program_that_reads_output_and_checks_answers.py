@@ -1,3 +1,6 @@
+# make the Quiz App.
+import tkinter as tk
+
 # open the text file from Quiz Creator in read mode.
 def load_questions(filename="user_quiz.txt"):
     with open(filename, "r") as file:
@@ -37,7 +40,9 @@ def load_questions(filename="user_quiz.txt"):
 
     return quiz_questions
 
-# make the Quiz App.
+# Create the GUI quiz app
+class QuizApp:
+    
 # make the sizes for the window.
 # make it randomize the questions.
 # set the user score and current question index to 0.

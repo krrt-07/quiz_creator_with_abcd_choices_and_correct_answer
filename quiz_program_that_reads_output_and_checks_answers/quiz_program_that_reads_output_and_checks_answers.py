@@ -105,3 +105,9 @@ class QuizApp:
             self.feedback_label.config(text=f"Final Score: {self.score}/{len(self.quiz_questions)}")
             self.next_button.config(state=tk.DISABLED)
 
+    # make a function that will go to the next question.
+    def check_answer(self, selected_choice):
+        question = self.quiz_questions[self.current_question_index]
+        for button in self.choice_buttons.values():
+            button.config(state=tk.DISABLED)
+

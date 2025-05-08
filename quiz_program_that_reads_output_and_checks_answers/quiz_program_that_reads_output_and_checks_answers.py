@@ -42,8 +42,13 @@ def load_questions(filename="user_quiz.txt"):
 
 # Create the GUI quiz app
 class QuizApp:
-    
-# make the sizes for the window.
+    # make the sizes for the window.
+    def __init__(self, master):
+        self.master = master
+        master.title("Quiz App")
+        master.geometry("500x400")
+        master.resizable(False, False)
+        
 # make it randomize the questions.
 # set the user score and current question index to 0.
 # Create the question label.

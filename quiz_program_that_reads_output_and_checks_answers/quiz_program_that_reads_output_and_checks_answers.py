@@ -55,8 +55,10 @@ class QuizApp:
         self.quiz_questions = load_questions()
         random.shuffle(self.quiz_questions)
 
-
-# set the user score and current question index to 0.
+        # set the user score and current question index to 0.
+        self.current_question_index = 0
+        self.score = 0
+        
 # Create the question label.
 # Create the choice buttons (A, B, C, D)
 # Feedback label for correct/incorrect answer.

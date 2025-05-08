@@ -15,10 +15,10 @@ with open("user_quiz.txt", "a") as file:
             break
 
         # ask for the possible answers in (A, B, C, D)
-        choice_A = input("Enter a possible answer, A: ")
-        choice_B = input("Enter a possible answer, B: ")
-        choice_C = input("Enter a possible answer, C: ")
-        choice_D = input("Enter a possible answer, D: ")
+        choice_a = input("Enter a possible answer, A: ")
+        choice_b = input("Enter a possible answer, B: ")
+        choice_c = input("Enter a possible answer, C: ")
+        choice_d = input("Enter a possible answer, D: ")
 
         # input the correct answer.
         correct_answer = input("Enter the correct answer(A, B, C, D): ")

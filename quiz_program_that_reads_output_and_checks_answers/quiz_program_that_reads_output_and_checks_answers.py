@@ -70,8 +70,11 @@ class QuizApp:
                                command=lambda selected_choice=choice: self.check_answer(selected_choice))
             button.pack(pady=5)
             self.choice_buttons[choice] = button
-            
-# Feedback label for correct/incorrect answer.
+
+        # Feedback label for correct/incorrect answer.
+        self.feedback_label = tk.Label(master, text="", font=("Arial", 14))
+        self.feedback_label.pack(pady=10)      
+          
 # Next button to go to the next question.
 # Score label to show the user score.
 # Show the first question.

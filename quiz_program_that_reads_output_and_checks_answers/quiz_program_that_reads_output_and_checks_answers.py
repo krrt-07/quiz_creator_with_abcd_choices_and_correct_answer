@@ -96,3 +96,12 @@ class QuizApp:
             self.feedback_label.config(text="")
             # disable the nest button until the users answer the question.
             self.next_button.config(state=tk.DISABLED)
+
+        # if there are no more questions, show the final score.
+        else:
+            self.question_label.config(text="🎉 Quiz Finished!")
+            for button in self.choice_buttons.values():
+                button.config(state=tk.DISABLED)
+            self.feedback_label.config(text=f"Final Score: {self.score}/{len(self.quiz_questions)}")
+            self.next_button.config(state=tk.DISABLED)
+

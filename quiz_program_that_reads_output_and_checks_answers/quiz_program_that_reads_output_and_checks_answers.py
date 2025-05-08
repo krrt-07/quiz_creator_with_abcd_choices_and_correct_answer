@@ -74,9 +74,14 @@ class QuizApp:
         # Feedback label for correct/incorrect answer.
         self.feedback_label = tk.Label(master, text="", font=("Arial", 14))
         self.feedback_label.pack(pady=10)      
-          
-# Next button to go to the next question.
-# Score label to show the user score.
+
+        # Next button to go to the next question.
+        self.next_button = tk.Button(master, text="Next Question", font=("Arial", 12), command=self.next_question)
+        self.next_button.pack(pady=10)   
+        
+        # Score label to show the user score.
+        self.score_label = tk.Label(master, text=f"Score: 0", font=("Arial", 12))
+        self.score_label.pack(pady=5)
 # Show the first question.
 # start the main program condition.
 

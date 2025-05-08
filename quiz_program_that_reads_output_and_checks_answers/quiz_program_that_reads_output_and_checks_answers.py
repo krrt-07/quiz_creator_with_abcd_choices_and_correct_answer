@@ -63,8 +63,14 @@ class QuizApp:
         self.question_label = tk.Label(master, text="", font=("Arial", 16), wraplength=480, justify="left")
         self.question_label.pack(pady=20)
 
-
-# Create the choice buttons (A, B, C, D)
+        # Create the choice buttons (A, B, C, D)
+        self.choice_buttons = {}
+        for choice in ["A", "B", "C", "D"]:
+            button = tk.Button(master, text="", width=40, font=("Arial", 12),
+                               command=lambda selected_choice=choice: self.check_answer(selected_choice))
+            button.pack(pady=5)
+            self.choice_buttons[choice] = button
+            
 # Feedback label for correct/incorrect answer.
 # Next button to go to the next question.
 # Score label to show the user score.

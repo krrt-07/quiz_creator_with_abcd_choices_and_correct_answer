@@ -1,0 +1,28 @@
+Question #1: 1
+A. 2
+B. 3
+C. 4
+D. 5
+Correct Answer: a
+
+Question #2: 5
+A. 4
+B. 3
+C. 2
+D. 1
+Correct Answer: b
+
+Question #3: 6
+A. 7
+B. 8
+C. 9
+D. 0
+Correct Answer: c
+
+Question #4: 0
+A. 9
+B. 8
+C. 7
+D. 6
+Correct Answer: d
+

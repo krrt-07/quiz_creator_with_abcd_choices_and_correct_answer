@@ -117,9 +117,11 @@ class QuizApp:
             self.feedback_label.config(text="✅ Tama! Good job!", fg="green")
         else:
             self.feedback_label.config(text=f"❌ Mali. Tamang sagot: {question['correct']}", fg="red")
+            # Enable the "Next Question" button after answering
+            self.score_label.config(text=f"Score: {self.score}")
+            self.next_button.config(state=tk.NORMAL)  
 
     # show the next question and update the score label until there are no more questions.
     def next_question(self):
         self.current_question_index += 1
         self.show_question()
-

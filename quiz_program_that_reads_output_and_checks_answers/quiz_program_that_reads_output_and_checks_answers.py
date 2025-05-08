@@ -6,8 +6,31 @@ def load_questions(filename="user_quiz.txt"):
     quiz_questions = []
     for question_block in content:
         question_lines = question_block.strip().split("\n")
-        
+
 # make a condition that will get the questions and answers from the text file.
+        try:
+            # Extract question text, answer choices, and the correct answer
+            question_text = question_lines[0].split(": ", 1)[1]
+            answer_choices = {
+                "A": question_lines[1][3:],
+                "B": question_lines[2][3:],
+                "C": question_lines[3][3:],
+                "D": question_lines[4][3:]
+            }
+            correct_answer = question_lines[5].split(": ")[1].strip().upper()
+            
+            # Append the question details to the list
+            quiz_questions.append({
+                "question": question_text,
+                "choices": answer_choices,
+                "correct": correct_answer
+            })
+        except IndexError:
+            # If there's an issue with the formatting of the question block, skip it
+            print(f"Error processing question block: {question_block}")
+            continue
+
+    return quiz_questions
 # Skip empty or malformed question blocks (must have at least 6 lines)
 # make the Quiz App.
 # make the sizes for the window.

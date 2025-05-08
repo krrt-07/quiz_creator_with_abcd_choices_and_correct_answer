@@ -58,8 +58,12 @@ class QuizApp:
         # set the user score and current question index to 0.
         self.current_question_index = 0
         self.score = 0
-        
-# Create the question label.
+
+        # Create the question label.
+        self.question_label = tk.Label(master, text="", font=("Arial", 16), wraplength=480, justify="left")
+        self.question_label.pack(pady=20)
+
+
 # Create the choice buttons (A, B, C, D)
 # Feedback label for correct/incorrect answer.
 # Next button to go to the next question.

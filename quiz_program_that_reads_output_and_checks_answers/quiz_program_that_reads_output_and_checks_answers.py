@@ -87,4 +87,12 @@ class QuizApp:
         self.show_question()
         
 # start the main program condition.
-
+    def show_question(self):
+        if self.current_question_index < len(self.quiz_questions):
+            question = self.quiz_questions[self.current_question_index]
+            self.question_label.config(text=f"Q: {question['question']}")
+            for choice_key in question['choices']:
+                self.choice_buttons[choice_key].config(text=f"{choice_key}. {question['choices'][choice_key]}", state=tk.NORMAL)
+            self.feedback_label.config(text="")
+            # disable the nest button until the users answer the question.
+            self.next_button.config(state=tk.DISABLED)

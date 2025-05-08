@@ -111,3 +111,15 @@ class QuizApp:
         for button in self.choice_buttons.values():
             button.config(state=tk.DISABLED)
 
+        # make a condition that will check if answer is correct or not and show the feedback.
+        if selected_choice == question["correct"]:
+            self.score += 1
+            self.feedback_label.config(text="✅ Tama! Good job!", fg="green")
+        else:
+            self.feedback_label.config(text=f"❌ Mali. Tamang sagot: {question['correct']}", fg="red")
+
+    # show the next question and update the score label until there are no more questions.
+    def next_question(self):
+        self.current_question_index += 1
+        self.show_question()
+

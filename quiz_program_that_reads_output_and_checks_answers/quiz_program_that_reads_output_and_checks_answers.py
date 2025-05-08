@@ -82,6 +82,9 @@ class QuizApp:
         # Score label to show the user score.
         self.score_label = tk.Label(master, text=f"Score: 0", font=("Arial", 12))
         self.score_label.pack(pady=5)
-# Show the first question.
+
+        # Show the first question.
+        self.show_question()
+        
 # start the main program condition.
 
